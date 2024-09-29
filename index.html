@@ -3,13 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebGL 2D Triangle</title>
+    <title>WebGL Change Object Color</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        canvas {
+            width: 100%;
+            height: 90vh; 
+            display: block;
+        }
+
+        #controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; 
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="glCanvas" width="600" height="400"></canvas>
-    <button id="redButton">Red</button>
-    <button id="greenButton">Green</button>
-    <button id="blueButton">Blue</button>
-    <script type="module" src="updated_app.js"></script>
+    <canvas id="glCanvas"></canvas>
+    <div id="controls">
+        <button onclick="setColor('red')">Red</button>
+        <button onclick="setColor('green')">Green</button>
+        <button onclick="setColor('blue')">Blue</button>
+        <button onclick="resetColor()">Reset</button> 
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
